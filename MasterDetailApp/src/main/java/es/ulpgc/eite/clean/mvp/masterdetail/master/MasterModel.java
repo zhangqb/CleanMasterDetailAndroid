@@ -69,15 +69,6 @@ public class MasterModel
   }
 
 
-  @Override
-  public void deleteItem(ModelItem item) {
-    if (items.contains(item)){
-      items.remove(item);
-    } else {
-      getPresenter().onErrorDeletingItem(item);
-    }
-  }
-
   /**
    * Llamado para recuperar los elementos iniciales de la lista.
    * En este caso siempre se llamará a la tarea asíncrona
@@ -87,6 +78,17 @@ public class MasterModel
     items = null;
     loadItems();
   }
+
+
+  @Override
+  public void deleteItem(ModelItem item) {
+    if (items.contains(item)){
+      items.remove(item);
+    } else {
+      getPresenter().onErrorDeletingItem(item);
+    }
+  }
+
 
   @Override
   public String getErrorMessage() {

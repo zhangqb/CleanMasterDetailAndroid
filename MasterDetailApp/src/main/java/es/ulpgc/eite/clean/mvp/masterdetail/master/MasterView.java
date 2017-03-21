@@ -58,7 +58,7 @@ public class MasterView
   @Override
   protected void onResume() {
     super.onResume(MasterPresenter.class, this);
-    getPresenter().onResumingContent();
+    //getPresenter().onResumingContent();
   }
 
   @Override
