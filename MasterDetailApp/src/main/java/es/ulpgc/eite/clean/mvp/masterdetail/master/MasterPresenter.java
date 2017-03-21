@@ -169,7 +169,6 @@ public class MasterPresenter extends GenericPresenter
    */
   @Override
   public void onScreenResumed() {
-    /*
     // Se verifica si ha cambiado el estado del maestro debido a acciones en el detalle y,
     // de ser el caso, se actualiza el mismo. Aquí, la única posibilidad es el borrado de
     // uno de los elementos de la lista
@@ -177,7 +176,6 @@ public class MasterPresenter extends GenericPresenter
       Log.d(TAG, "calling deleteItem()");
       getModel().deleteItem(itemToDelete);
     }
-    */
 
     getModel().loadItems();
   }
