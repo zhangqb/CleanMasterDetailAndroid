@@ -1,5 +1,6 @@
 package es.ulpgc.eite.clean.mvp.masterdetail.master;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.RecyclerView;
@@ -53,6 +54,7 @@ public class MasterView
    * Method that initialized MVP objects
    * {@link super#onResume(Class, Object)} should always be called
    */
+  @SuppressLint("MissingSuperCall")
   @Override
   protected void onResume() {
     super.onResume(MasterPresenter.class, this);

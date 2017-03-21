@@ -1,5 +1,6 @@
 package es.ulpgc.eite.clean.mvp.masterdetail.detail;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -52,6 +53,7 @@ public class DetailView
    * Method that initialized MVP objects
    * {@link super#onResume(Class, Object)} should always be called
    */
+  @SuppressLint("MissingSuperCall")
   @Override
   protected void onResume() {
     super.onResume(DetailPresenter.class, this);
