@@ -5,8 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/CleanMasterDetailAndroid.iml" filepath="$PROJECT_DIR$/CleanMasterDetailAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/CleanMasterDetailProject.iml" filepath="$PROJECT_DIR$/CleanMasterDetailProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/CleanMvpLib/CleanMvpLib.iml" filepath="$PROJECT_DIR$/CleanMvpLib/CleanMvpLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CleanMvpLib/CleanMvpLib.iml" filepath="$PROJECT_DIR$/CleanMvpLib/CleanMvpLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MasterDetailApp/MasterDetailApp.iml" filepath="$PROJECT_DIR$/MasterDetailApp/MasterDetailApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/MasterDetailApp/MasterDetailApp.iml" filepath="$PROJECT_DIR$/MasterDetailApp/MasterDetailApp.iml" />
     </modules>
   </component>

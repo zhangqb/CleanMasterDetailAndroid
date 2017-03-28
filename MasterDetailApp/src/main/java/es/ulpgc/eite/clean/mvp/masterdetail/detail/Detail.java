@@ -48,6 +48,9 @@ public interface Detail {
   interface PresenterToView extends ContextView {
     void finishScreen();
     void hideToolbar();
+
+    void showDetails(String details);
+    void showTitle(String title);
   }
 
   /**

@@ -118,6 +118,9 @@ public class DetailPresenter extends GenericPresenter
   @Override
   public void onScreenStarted() {
     checkVisibility();
+    ModelItem item = getModel().getItem();
+    getView().showDetails(item.getDetails());
+    getView().showTitle(item.getTitle());
   }
 
   /**

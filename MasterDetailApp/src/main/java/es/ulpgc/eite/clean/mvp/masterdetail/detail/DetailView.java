@@ -57,15 +57,15 @@ public class DetailView
   @Override
   protected void onResume() {
     super.onResume(DetailPresenter.class, this);
-    item = getPresenter().getItem();
+    //item = getPresenter().getItem();
 
     if (toolbarLayout != null && item != null) {
-      toolbarLayout.setTitle(item.getContent());
+      toolbarLayout.setTitle(item.getTitle());
     }
 
     // Show the dummy content as text in a TextView.
     if (item != null) {
-      ((TextView) findViewById(R.id.item_detail)).setText(item.getDetails());
+      ((TextView) findViewById(R.id.item_details)).setText(item.getDetails());
     }
 
   }
@@ -105,6 +105,22 @@ public class DetailView
   public void hideToolbar() {
     toolbar.setVisibility(View.GONE);
     appbarLayout.setExpanded(false);
+  }
+
+  @Override
+  public void showDetails(String details) {
+    if (details != null) {
+      ((TextView) findViewById(R.id.item_details)).setText(item.getDetails());
+    }
+
+  }
+
+  @Override
+  public void showTitle(String title) {
+    if (title != null) {
+      ((TextView) findViewById(R.id.item_title)).setText(item.getDetails());
+    }
+
   }
 
 }

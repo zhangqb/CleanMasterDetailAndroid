@@ -7,12 +7,12 @@ package es.ulpgc.eite.clean.mvp.masterdetail.app;
 public class ModelItem {
 
   private String id;
-  private String content;
+  private String title;
   private String details;
 
-  public ModelItem(String id, String content, String details) {
+  public ModelItem(String id, String title, String details) {
     this.id = id;
-    this.content = content;
+    this.title = title;
     this.details = details;
   }
 
@@ -32,17 +32,17 @@ public class ModelItem {
     this.id = id;
   }
 
-  public String getContent() {
-    return content;
+  public String getTitle() {
+    return title;
   }
 
-  public void setContent(String content) {
-    this.content = content;
+  public void setTitle(String title) {
+    this.title = title;
   }
 
   @Override
   public String toString() {
-    return content;
+    return title;
   }
 
   @Override

@@ -149,7 +149,7 @@ public class MasterView
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
       holder.item = items.get(position);
-      holder.contentView.setText(items.get(position).getContent());
+      holder.contentView.setText(items.get(position).getTitle());
       holder.itemView.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -171,7 +171,7 @@ public class MasterView
       public ViewHolder(View view) {
         super(view);
         itemView = view;
-        contentView = (TextView) view.findViewById(R.id.item_content);
+        contentView = (TextView) view.findViewById(R.id.item_title);
       }
 
       @Override
