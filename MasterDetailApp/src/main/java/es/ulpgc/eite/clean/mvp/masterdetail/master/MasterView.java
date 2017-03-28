@@ -133,6 +133,7 @@ public class MasterView
       items = new ArrayList<>();
     }
 
+
     public void setItemList(List<ModelItem> items) {
       this.items = items;
       notifyDataSetChanged();
