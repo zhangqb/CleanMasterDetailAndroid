@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.masterdetail.R;
-import es.ulpgc.eite.clean.mvp.masterdetail.app.ModelItem;
 import es.ulpgc.eite.clean.mvp.masterdetail.master.MasterView;
 
 /**
@@ -26,7 +25,7 @@ public class DetailView
     extends GenericActivity<Detail.PresenterToView, Detail.ViewToPresenter, DetailPresenter>
     implements Detail.PresenterToView {
 
-  private ModelItem item;
+  //private ModelItem item;
   private Toolbar toolbar;
   private CollapsingToolbarLayout toolbarLayout;
   private AppBarLayout appbarLayout;
@@ -59,6 +58,7 @@ public class DetailView
     super.onResume(DetailPresenter.class, this);
     //item = getPresenter().getItem();
 
+    /*
     if (toolbarLayout != null && item != null) {
       toolbarLayout.setTitle(item.getTitle());
     }
@@ -67,6 +67,7 @@ public class DetailView
     if (item != null) {
       ((TextView) findViewById(R.id.item_details)).setText(item.getDetails());
     }
+    */
 
   }
 
@@ -109,18 +110,28 @@ public class DetailView
 
   @Override
   public void showDetails(String details) {
+    ((TextView) findViewById(R.id.item_details)).setText(details);
+
+    /*
     if (details != null) {
       ((TextView) findViewById(R.id.item_details)).setText(item.getDetails());
     }
-
+    */
   }
 
   @Override
   public void showTitle(String title) {
+    if (toolbarLayout != null ) {
+      toolbarLayout.setTitle(title);
+    }
+
+    //((TextView) findViewById(R.id.item_title)).setText(title);
+
+    /*
     if (title != null) {
       ((TextView) findViewById(R.id.item_title)).setText(item.getDetails());
     }
-
+    */
   }
 
 }

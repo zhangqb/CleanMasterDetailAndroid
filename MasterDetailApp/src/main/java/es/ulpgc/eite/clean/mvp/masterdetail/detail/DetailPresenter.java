@@ -122,9 +122,11 @@ public class DetailPresenter extends GenericPresenter
   }
 
   private void onRefreshingView() {
-    ModelItem item = getModel().getItem();
-    getView().showDetails(item.getDetails());
-    getView().showTitle(item.getTitle());
+    if(isViewRunning()) {
+      ModelItem item = getModel().getItem();
+      getView().showDetails(item.getDetails());
+      getView().showTitle(item.getTitle());
+    }
   }
 
   /**
